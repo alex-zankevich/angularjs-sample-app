@@ -1,6 +1,11 @@
-$headerTextColor: #933c30;
+$headerTextColor: #3f3f3f;
+$fontFamily: Helvetica;
+
+html {
+	font-family: $fontFamily;
+	color: $headerTextColor;
+}
 
 header {
-	color: $headerTextColor;
 	text-align: center;
 }
