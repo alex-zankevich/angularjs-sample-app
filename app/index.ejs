@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Live Editor</title>
+	<link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.chunks.app.css[0] %>">
+	<script src="<%= htmlWebpackPlugin.options.assets.vendor.js %>"></script>
+	<script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
+</head>
+<body>
+	<div ng-app="app">
+		<app></app>
+	</div>
+</body>
+</html>
