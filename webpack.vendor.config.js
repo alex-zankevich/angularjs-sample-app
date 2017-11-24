@@ -5,10 +5,12 @@ const path = require('path');
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const VENDOR_NAME = 'vendor';
+
 const PATHS = {
 	output: resolve(__dirname, 'dist/'),
-	manifest: resolve(__dirname, 'dist/vendor/'),
-	vendor: resolve(__dirname, 'dist/vendor'),
+	manifest: resolve(__dirname, `dist/${VENDOR_NAME}/`),
+	vendor: resolve(__dirname, `dist/${VENDOR_NAME}`)
 };
 
 module.exports = () => {
@@ -23,7 +25,7 @@ module.exports = () => {
 			filename: '[name].dll.[hash].js',
 			path: PATHS.vendor,
 			library: '[name]_lib',
-			publicPath: '../'
+			publicPath: `./${VENDOR_NAME}/`
 		},
 		plugins: [
 			new CleanWebpackPlugin([PATHS.vendor]),

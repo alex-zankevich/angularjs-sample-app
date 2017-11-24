@@ -38,7 +38,7 @@ module.exports = () => {
 			watchOptions: {
 				ignored: /node_modules/,
 			},
-			contentBase: PATHS.vendor,
+			contentBase: PATHS.output,
 		},
 
 		module: {
